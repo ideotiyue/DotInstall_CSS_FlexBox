@@ -1,0 +1,89 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  width: 380px;
+  height: 250px;
+  background-color: paleturquoise;
+}
+
+h2,span{
+color: red;
+}
+
+.box{
+  width: 100px;
+  height: 100px;
+}
+
+.box1{
+  background-color: rosybrown;
+}
+
+.box2{
+  background-color: salmon;
+}
+
+.box3{
+  background-color: palegreen;
+}
+
+.box4{
+  background-color: palegoldenrod;
+}
+
+.class1 > .box1 {
+  align-self: flex-start;
+}
+
+.class2 > .box1 {
+  align-self: flex-end;
+}
+
+.class3 > .box1 {
+  align-self: center;
+}
+
+.class4 > .box2 {
+  order: 1;
+}
+
+/* flex-growの設定サンプル */
+.class5 > .box1 {
+flex-grow: 0;
+}
+.class5 > .box2 {
+flex-grow: 0;
+}
+.class5 > .box3 {
+flex-grow: 1;
+}
+
+/* flex-shrinkの設定サンプル */
+.class6 > .box1 {
+  flex-shrink: 0;
+}
+.class6 > .box2 {
+  flex-shrink: 0;
+}
+.class6 > .box3 {
+  flex-shrink: 0;
+}
+.class6 > .box4 {
+  flex-shrink: 1;
+}
+
+.class7 > .box {
+  flex: initial;
+}
+
+.class8 > .box {
+  flex: auto;
+}
+
+.class9 > .box {
+  flex: none;
+}
+
+.class10 > .box {
+  flex: 1;
+}

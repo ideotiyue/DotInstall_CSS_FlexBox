@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="discription" content="ドットインストール詳細CSSフレックスボックス編">
+  <title>CSSフレックスボックス</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>フレックスボックス</h1>
+    <h1>フレックスボックスのプロパティ</h1>
+    <img src="../img/flexbox1.png" width="600px" height="300px">
+    
+  <h1>Flex Itemで使えるプロパティ</h1>
+  <h2>align-self</h2>
+      <p>
+        交差軸の交差軸方向の揃えを指定する<br>
+        個々の要素の位置を調整したいときに使う。
+      </p>
+      <h4>align-self: flex-start;</h4>
+      <p>交差軸の始点、つまり上揃え。</p>
+      <div class="container class1">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+      </p>
+      <h4>align-self: flex-end;</h4>
+      <p>交差軸の終点、つまり下揃え</p>
+      <div class="container class2">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+      </p>
+      <h4>align-self: flex-centre;</h4>
+      <p>交差軸に対して中央揃え</p>
+      <div class="container class3">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+    <h2>order</h2>
+      <p>
+        順番を指定する。初期値は 0
+      </p>
+      <h4>align-self: flex-start;</h4>
+      <p>
+        なので、例えばどれか一つの要素だけを order: 1; にすると、それが最後に並べられる。<br>
+        order: -1; にすると一番前に並べられます。
+      </p>
+      <div class="container class4">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+      </p>
+      <img src="../img/flexbox2.png" width="600px" height="300px">
+<hr>
+      <h2>flex-basis</h2>
+      <p>
+        flex-grow 、 flex-shrink での計算に使われる要素のサイズを決めるためのプロパティです。<br>
+        flex item は主軸方向に伸び縮みするので、<br>
+        flex-direction: row; なら flex-basis は要素の幅、<br>
+        flex-direction: column; なら flex-basis は要素の高さを表す点に注意。
+      </p>
+      <h4>値の設定</h4>
+      <p>
+        初期値は auto で、これは要素に設定された幅になります。<br>
+        width が設定されていればその値、 width が設定されていなければコンテンツの幅になります。<br>
+        値の優先度は<br>
+        <span> max-width や min-width＞flex-basis＞width</span>
+      </p>
+
+      <h2>flex-grow</h2>
+      <p>
+        主軸方向に余白があるときに、それぞれの要素をどれだけ伸ばすかを指定するためのプロパティです。<br>
+        初期値は 0 （余白があっても伸ばさない、という意）<br>
+        設定した割合で余白を割り当てる。
+      </p>
+      <div class="container class5">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+      <h2>flex-shrink</h2>
+      <p>
+        主軸方向に幅が足りなかったときに、どの要素をどれだけ縮めるかを指定するためのプロパティです。<br>
+        初期値は 1 （1:1 で割り振る意）<br>
+        設定した割合で幅を縮小する。 0 を指定したものは縮まないという点に注意。
+      </p>
+      <div class="container class6">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+        <div class="box box4">flex item 4</div>
+      </div>
+
+      <h1>幅調整の一括指定</h1>
+      <h2>flex</h2>
+      <p>
+        <ol>
+          <li>flex-grow</li>
+          <li>flex-shrink</li>
+          <li>flex-basis</li>
+        </ol>
+        上記プロパティは flex というプロパティで一括指定可能。書く順番は指定の通り。
+      </p>
+      <h4>flex: initial;</h4>
+      <p>
+        initial; とすると、それぞれの初期値が設定されるので 0 1 auto と同じ意味になります。<br>
+        ※領域が余っても伸ばさない、でも領域が足りなくなったら縮めるといった指定
+      </p>
+      <div class="container class7">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+        <div class="box box4">flex item 4</div>
+      </div>
+
+      <h4>flex: auto;</h4>
+      <p>
+        auto とすると 1 1 auto の意味になります。<br>
+        ※領域が余ったら広げる、足りなくなったら縮めるといった指定
+      </p>
+      <div class="container class8">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+      <h4>flex: none;</h4>
+      <p>
+        none としてあげると 0 0 auto の意味。<br>
+        ※伸ばしも縮めもしない指定
+      </p>
+      <div class="container class9">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+      
+      <h4>flex: 1;</h4>
+      <p>
+        ひとつだけ単位なしの整数を指定した場合は flex-grow の値を指定したことになります。<br>
+        flex: 1;は1 1 0% の意味。
+        flex-shrink は初期値の 1 、flex-basis は初期値の auto ではなく<span> 0% </span>になります。<br>
+        flex で flex-grow だけを指定した場合は、 flex-basis を 0% にしてきれいに配分されるようになっている。<br>
+        余白があったら伸ばしておいてね、という意味で、ひとつのアイテムだけに flex: 1; を指定することがほとんど。
+      </p>
+      <div class="container class10">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+  </body>
+</html>

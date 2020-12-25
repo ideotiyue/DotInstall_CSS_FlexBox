@@ -1,0 +1,21 @@
+.body {
+  margin: 0px;
+}
+
+header {
+  height: 200px;
+  background-color: skyblue;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  width: 100px;
+  height: 40px;
+  background-color: slategray;
+  /* position: absolute;
+  top: calc( 50% - 20px);
+  left: calc( 50% - 50px); */
+}

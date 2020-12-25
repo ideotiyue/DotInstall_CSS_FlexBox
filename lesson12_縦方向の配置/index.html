@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="discription" content="ドットインストール詳細CSSフレックスボックス編">
+  <title>CSSフレックスボックス</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>Header</header>
+  <div class="container">
+    <main>
+      Main<br>display: flex;は直下の子要素のみが対象。入れ子で要素があった場合、それらは flex item にはならない点に注意。<br>縦方向の Flex アイテムでは margin の相殺が起きない点についても注意
+    </main>
+    <nav>nav<br>order: -1;左に指定</nav>
+    <aside>Aside</aside>
+  </div>
+  <footer>Footer</footer>
+</body>
+</html>

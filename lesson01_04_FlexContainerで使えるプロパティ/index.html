@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="discription" content="ドットインストール詳細CSSフレックスボックス編">
+  <title>CSSフレックスボックス</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>フレックスボックス</h1>
+  <p>
+    Flexboxではflex container、flex itemにプロパティを設定することでレイアウトを組む。<br>
+    プロパティごとに作用する軸が異なるのでどの方向に作用しているか意識してレイアウト組みをすること。
+  </p>
+  <p>−主軸→</p>
+    <div class="container">
+      <div class="box box1">flex item 1</div>
+      <div class="box box2">flex item 2</div>
+      <div class="box box3">flex item 3</div>
+      <div class="box box4">↓<br>交<br>差<br>軸</div>
+    </div>
+    <h1>フレックスボックスのプロパティ</h1>
+    <img src="../img/flexbox1.png" width="600px" height="300px">
+    
+  <h1>Flex Containerで使えるプロパティ</h1>
+  <h2>flex-direction</h2>
+      <p>
+        主軸の方向を決めるためのプロパティ。<br>
+        初期値は row （行）。
+      </p>
+      <h4>flex-direction: row;</h4>
+      <p>主軸は左から右。</p>
+      <div class="container">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+      <h4>flex-direction: row-reverse;</h4>
+      <p>基本の形から主軸だけが反転</p>
+      <div class="container2">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+      <h4>flex-direction: column;</h4>
+      <p>基本の形から主軸と交差軸が逆</p>
+      <div class="container3">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+      <h4>flex-direction: row-reverse;</h4>
+      <p>主軸の向きが反対</p>
+      <div class="container4">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+      
+    
+  <h2>justify-content</h2>
+      <p>
+        主軸に沿って要素をどう揃えるかを指定するためのプロパティ。<br>
+        初期値は flex-start （行）。
+      </p>
+      <h4>justify-content: flex-start;</h4>
+      <p>主軸の始点、つまり左揃え</p>
+      <div class="container5">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+      <h4>justify-content: flex-end;</h4>
+      <p>主軸の終点なので右揃え</p>
+      <div class="container6">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+      <h4>justify-content: center;</h4>
+      <p>主軸に沿って中央揃え</p>
+      <div class="container7">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+      
+      <h4>justify-content: space-between;</h4>
+      <p>要素の間に余白を均等に配置</p>
+      <div class="container8">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+    
+    <h2>align-items</h2>
+      <p>
+        交差軸に沿ってどう要素を揃えるかの指定。<br>
+        交差軸方向に余裕がある場合にのみ有効なプロパティ。<br>
+        flexbox で align となっていたら、交差軸に対しての操作になる。
+      </p>
+
+      <h4>align-items: flex-start;</h4>
+      <p>交差軸の始点なので上揃え</p>
+      <div class="container9">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+  
+      <h4>align-items: flex-end;</h4>
+      <p>交差軸の終点なので下揃え</p>
+      <div class="container10">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+  
+      <h4>align-items: center;</h4>
+      <p>交差軸に沿って中央揃え</p>
+      <div class="container11">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+        
+    <h2>flex-wrap</h2>
+      <p>
+        並べたい要素の幅がコンテナの幅を超える場合に使えるプロパティ。<br>
+        初期値は nowrap。
+      </p>
+
+      <h4>flex-wrap: nowrap;</h4>
+      <p>それぞれの幅が縮んで収まる。</p>
+      <div class="container12">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+      <h4>flex-wrap: wrap;</h4>
+      <p>はみ出した分を折り返す。</p>
+      <div class="container13">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+      <h4>flex-wrap: wrap-reverse;</h4>
+      <p>交差軸の向きが反転し、交差軸が始まる位置から主軸に沿って並べられていって、溢れたら更にコンテナが作られ、また主軸の方向に並べられる。</p>
+      <div class="container14">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+        <div class="box box4">flex item 4</div>
+      </div>
+
+    <h2>align-content</h2>
+      <p>
+        flex-wrap で折り返しが指定されていて、なおかつ交差軸方向に余裕がある状態で、交差軸方向で要素を揃えたい場合に使えるプロパティ。
+      </p>
+
+      <h4>align-content: flex-start;</h4>
+      <p>交差軸の始点、つまり上揃え。</p>
+      <div class="container15">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+      <h4>align-content: flex-end;</h4>
+      <p>交差軸の終点、つまり下揃え。</p>
+      <div class="container16">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+
+      <h4>align-content: center;</h4>
+      <p>交差軸の中央。</p>
+      <div class="container17">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+        <div class="box box4">flex item 4</div>
+      </div>
+      
+      <h4>align-content: space-between;</h4>
+      <p>余った余白が配分される。</p>
+      <div class="container18">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+        <div class="box box4">flex item 4</div>
+      </div>
+
+    <h2>flex-flow</h2>
+      <p>
+        flex-direction と flex-wrap ですが、 flex-flow というプロパティで一括指定することもできます。<br>
+        flex-flow: row wrapという風に書く
+      </p>
+      <div class="container19">
+        <div class="box box1">flex item 1</div>
+        <div class="box box2">flex item 2</div>
+        <div class="box box3">flex item 3</div>
+      </div>
+  </body>
+</html>

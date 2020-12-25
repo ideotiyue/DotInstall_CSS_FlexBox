@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+  /* .container を縦方向に伸ばすために高さを設定する */
+}
+
+body {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  /* .container を縦方向に伸ばすために高さを設定する */
+  height: 100%;
+}
+
+header {
+  background-color: khaki;
+}
+
+/* .container は main 、 nav 、 aside に対する flex container でもあり、 body に対する flex item でもある点に注意 */
+.container{
+  display: flex;
+  flex: 1;
+}
+
+nav {
+  background-color: mediumpurple;
+  width: 300px;
+  order: -1;
+}
+
+main {
+  background-color: lightpink;
+  flex: 1;
+}
+
+aside {
+  background-color: lightskyblue;
+  width: 100px;
+}
+
+footer {
+  background-color: lightgreen;
+}

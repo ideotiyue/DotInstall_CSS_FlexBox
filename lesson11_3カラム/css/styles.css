@@ -1,0 +1,29 @@
+.body {
+  margin: 0px;
+}
+
+header {
+  background-color: khaki;
+}
+.container{
+  display: flex;
+}
+nav {
+  background-color: mediumpurple;
+  width: 300px;
+  order: -1;
+}
+
+main {
+  background-color: lightpink;
+  flex: 1;
+}
+
+aside {
+  background-color: lightskyblue;
+  width: 100px;
+}
+
+footer {
+  background-color: lightgreen;
+}
